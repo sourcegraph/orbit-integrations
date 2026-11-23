@@ -11,13 +11,12 @@ jobs:
         with:
           fetch-depth: 0
           submodules: recursive
-      - name: Set up Ruby 2.7.2
-        uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199 # v1.338.0
+      - name: Set up Ruby 3.4.13
+        uses: ruby/setup-ruby@be3c7df29b3349ec6bcfc6b4792f1cf9f5237d18 # v1.343.0
         with:
-          ruby-version: 2.7.2
+          ruby-version: 3.4.13
       - name: Bundle Install
         run: |
-          gem update --system 3.1.4 -N
           gem install --no-document dev_orbit
       - name: Check for New Comments for a DEV Organization
         run: |
